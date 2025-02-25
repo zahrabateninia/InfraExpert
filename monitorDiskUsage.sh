@@ -7,7 +7,7 @@ THRESHOLD=90
 DISK_USAGE=$(df -h / | awk 'NR==2{print $5}' | sed 's/%//')
 
 if [ "$DISK_USAGE" -gt "$THRESHOLD" ]; then
-    echo "Warning: Disk usage on server $HOSTNAME has exceeded $THRESHOLD%." | mail -s "Disk space Alert" zahrabatenin@gmail.com
+    echo "Warning: Disk usage on server $HOSTNAME has exceeded $THRESHOLD%." | mail -s "Disk space Alert" zahrabatenin@email.com
     exit 1
 else
     echo "Disk usage is below $THRESHOLD%."
